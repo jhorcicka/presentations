@@ -1,0 +1,10 @@
+.idea
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.iml
+*.pdf
+*.zip

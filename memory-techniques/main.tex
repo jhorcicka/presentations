@@ -1,0 +1,39 @@
+%\documentclass{beamer}
+\documentclass[xcolor=dvipsnames]{beamer} 
+
+\usetheme{Warsaw}
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\usepackage[czech]{babel}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{. }
+\usepackage[utf8]{inputenc}
+\usepackage{picture}
+\usepackage{graphics}
+\usepackage{graphicx}
+
+\author{Jakub Horcicka}
+\title{\textsc{Memory techniques}}
+\subtitle{How to improve our memory?}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+ 
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \input{before-memory-path.tex}
+  \input{memory-path.tex}
+  \input{memory-path-images.tex}
+  \input{after-memory-path.tex}
+  \input{ending.tex}
+
+\end{document}  
+
