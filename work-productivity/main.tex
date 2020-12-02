@@ -1,0 +1,38 @@
+%\documentclass{beamer}
+\documentclass[xcolor=dvipsnames]{beamer} 
+
+\usetheme{Warsaw}
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\usepackage[czech]{babel}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{. }
+\usepackage[utf8]{inputenc}
+\usepackage{picture}
+\usepackage{graphics}
+\usepackage{graphicx}
+
+\author{Jakub Horcicka}
+\title{\textsc{Work productivity}}
+\subtitle{GTD, Pomodoro, Various tips}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+ 
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \input{various-tips.tex}
+  \input{pomodoro.tex}
+  \input{getting-things-done.tex}
+  \input{ending.tex}
+
+\end{document}  
+
