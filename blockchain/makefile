@@ -2,10 +2,10 @@
 
 TEX=pdflatex
 NAME=main
-PDF=productivity
-PACK=productivity.zip
+PDF=blockchain
+PACK=$(PDF).zip
 SRC=makefile *.tex ./img
-VIEWER=evince
+VIEWER=okular
 
 all: compile rename run
 

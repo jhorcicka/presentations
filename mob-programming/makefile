@@ -2,10 +2,10 @@
 
 TEX=pdflatex
 NAME=main
-PDF=productivity
-PACK=productivity.zip
+PDF=mob-programming
+PACK=$(PDF).zip
 SRC=makefile *.tex ./img
-VIEWER=evince
+VIEWER=okular
 
 all: compile rename run
 
@@ -26,4 +26,16 @@ pack: clean $(SRC)
 
 edit:
 	gvim -p $(NAME).tex *.bib
+
+pull: 
+	git pull origin master
+
+add: 
+	git add ./
+
+commit: 
+	git commit 
+
+push: clean add commit
+	git push origin master
 

@@ -6,8 +6,6 @@ PDF=hadoop
 PACK=$(PDF).zip
 SRC=makefile *.tex ./img
 VIEWER=evince
-BACKUP_DIRECTORY=/home/kuba/docs/code/latex/hadoop
-BACKUP_DIRECTORY2=/network/usrshare/kuba/hadoop-guild
 
 all: compile rename run
 
@@ -28,20 +26,4 @@ pack: clean $(SRC)
 
 edit:
 	gvim -p $(NAME).tex *.bib
-
-backup: pack
-	cp $(PACK) $(BACKUP_DIRECTORY)
-	cp $(PACK) $(BACKUP_DIRECTORY2)
-
-pull: 
-	git pull origin master
-
-add: 
-	git add ./
-
-commit: 
-	git commit 
-
-push: clean add commit
-	git push origin master
 

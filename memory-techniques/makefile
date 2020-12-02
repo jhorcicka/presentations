@@ -6,7 +6,6 @@ PDF=memory
 PACK=memory.zip
 SRC=makefile *.tex ./img
 VIEWER=evince
-BACKUP_DIRECTORY=/home/kuba/docs/code/latex/memory
 
 all: compile rename run
 
@@ -27,16 +26,4 @@ pack: clean $(SRC)
 
 edit:
 	gvim -p $(NAME).tex *.bib
-
-backup: pack
-	cp $(PACK) $(BACKUP_DIRECTORY)
-
-pull: 
-	git pull origin master
-
-commit: 
-	git commit -a
-
-push: 
-	git push origin master
 

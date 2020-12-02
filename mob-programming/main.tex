@@ -1,0 +1,36 @@
+%\documentclass{beamer}
+\documentclass[xcolor=dvipsnames]{beamer} 
+
+\usetheme{Warsaw}
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\author{Jakub Horcicka}
+\title{\textsc{Mob programming}}
+\subtitle{Engineering Guild}
+\date{\today}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{picture}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{. }
+\usepackage{outlines}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+ 
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \input{01-theory.tex}
+  \input{02-end.tex}
+
+\end{document}  
+
