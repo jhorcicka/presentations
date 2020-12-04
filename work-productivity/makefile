@@ -6,8 +6,12 @@ PDF=productivity
 PACK=productivity.zip
 SRC=makefile *.tex ./img
 VIEWER=evince
+BACKUP_DIR=/netapp/usrshare/jakubh/engineering-guilds/2020-09-work-productivity
 
 all: compile rename run
+
+backup: pack
+	cp $(PACK) $(BACKUP_DIR)
 
 compile:
 	pdflatex $(NAME).tex
